@@ -18,3 +18,11 @@ function addElement(tagName, content, attributes) {
     // Append the element to the body
     document.body.appendChild(element);
 }
+
+// Console
+document.getElementById("console").addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+        var code = document.getElementById("console").value;
+        eval(code);
+    }
+});
